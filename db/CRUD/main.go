@@ -63,6 +63,9 @@ func insertProduct(db *sql.DB, product *Product) error {
 	}
 	defer stmt.Close()
 	_, err = stmt.Exec(product.ID, product.Name, product.Price)
+	//ao invés do _, posso usar res para obter algumas infos
+	//res.RowsAffected()
+	//res.LastInsertId()
 	if err != nil {
 		return err
 	}
