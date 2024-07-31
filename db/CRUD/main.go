@@ -92,7 +92,7 @@ func selectProduct(db *sql.DB, id string) (*Product, error) {
 	}
 	defer stmt.Close()
 	var p Product
-	err = stmt.QueryRow(id).Scan(&p.ID, &p.Name, &p.Price)
+	err = stmt.QueryRow(id).Scan(&p.ID, &p.Name, &p.Price) // scan atribui os valores retornados para cada campo da struct product
 	if err != nil {
 		return nil, err
 	}
