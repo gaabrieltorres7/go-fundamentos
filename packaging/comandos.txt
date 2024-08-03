@@ -1,0 +1,6 @@
+gambiarra caso o módulo que eu queira usar do meu proj ainda não tenha subido
+ - go mod edit -replace github.com/gaabrieltorres7/packaging/1=../math
+
+ workspace local para que não seja necessário utilizar a gambiarra acima
+ crio na raiz
+ - go work init ./math ./sistema
